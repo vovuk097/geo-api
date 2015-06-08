@@ -1,0 +1,11 @@
+/db/geo-api_development
+/db/geo-api_test
+
+#Ignore all tempfiles
+*~
+
+#Ignore configuration
+.idea/
+apps/web/public/uploads/
+
+dump.rdb
