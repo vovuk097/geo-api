@@ -1,5 +1,3 @@
-object true
+collection results
+attributes :name, :place_id, :formatted_address, :lat, :lng
 
-results.keys.each do |key|
-  node(key){ results[key]}
-end

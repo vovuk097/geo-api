@@ -14,10 +14,9 @@ module Web::Controllers::Locations
     def call(params)
       self.format = :json
 
-      options = params.to_hash
-      results=google_places_collections(options)
-      self.body = results.inspect
-      # self.body =results.inspect
+      @results=google_places_collections(params)
+      puts @results.first.inspect
+      # self.body = @results.inspect
     end
 
 
@@ -29,7 +28,6 @@ module Web::Controllers::Locations
       else
         @client.spots(params['latitude'], params['longitude'], :radius => params['radius']) #-33.8670522, 151.1957362 100
                        end
-       # self.body = results.inspect
     end
 
   end

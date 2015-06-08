@@ -211,6 +211,7 @@ module Web
         include Lotus::Helpers
         ::Rabl.configure do |config|
           config.escape_all_output = false
+          config.include_json_root = false
         end
         ::Rabl.register!
       end
