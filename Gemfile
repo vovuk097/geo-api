@@ -23,3 +23,4 @@ gem 'rspec'
 group :development do
   gem 'guard'
 end
+gem 'rabl'

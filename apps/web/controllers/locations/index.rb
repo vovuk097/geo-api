@@ -1,6 +1,6 @@
 require 'google_places'
 module Web::Controllers::Locations
-  class Create
+  class Index
     include Web::Action
     expose :results
 
@@ -15,26 +15,22 @@ module Web::Controllers::Locations
       self.format = :json
 
       options = params.to_hash
-      get_proxi(options)
+      google_places_collections(options)
 
-      @location = {
-        latitude: params['latitude'],
-        longitude: params['longitude'],
-        radius: params['radius'],
-        address: params['address']
-      }
+
     end
 
 
-    def get_proxi(params)
+    def google_places_collections(params)
       address=params['address']
       @client = GooglePlaces::Client.new(ENV['API_KEY'])
       results = if !(address=='')
-        @client.spots_by_query(address) #Pizza near Miami Florida
+        @p=@client.spots_by_query(address) #Pizza near Miami Florida
       else
-        @client.spots(params['latitude'], params['longitude'], :radius => params['radius']) #-33.8670522, 151.1957362 100
-      end
-      self.body = result.inspect
+        @p=@client.spots(params['latitude'], params['longitude'], :radius => params['radius']) #-33.8670522, 151.1957362 100
+                end
+      return results
+       # self.body = results.inspect
     end
 
   end

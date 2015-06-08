@@ -209,6 +209,10 @@ module Web
       # See: http://www.rubydoc.info/gems/lotus-view#Configuration
       view.prepare do
         include Lotus::Helpers
+        ::Rabl.configure do |config|
+          config.escape_all_output = false
+        end
+        ::Rabl.register!
       end
     end
 

@@ -1,5 +1,5 @@
 module Web::Views::Locations
-  class Create
+  class Index
     include Web::View
   end
 end
