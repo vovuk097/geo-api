@@ -1,6 +1,6 @@
 require 'google_places'
 
-module Web::Views::Home
+module Web::Views::Places
 
   class New
     include Web::View
