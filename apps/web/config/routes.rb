@@ -1,4 +1,5 @@
-resources :locations, only: [:index, :new]
+post '/locations/:index', to: 'locations#index'
+resources :locations, only: [ :new]
 # Configure your routes here
 # See: http://www.rubydoc.info/gems/lotus-router/#Usage
 #

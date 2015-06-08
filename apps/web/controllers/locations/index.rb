@@ -15,21 +15,20 @@ module Web::Controllers::Locations
       self.format = :json
 
       options = params.to_hash
-      google_places_collections(options)
-
-
+      results=google_places_collections(options)
+      self.body = results.inspect
+      # self.body =results.inspect
     end
 
 
     def google_places_collections(params)
       address=params['address']
       @client = GooglePlaces::Client.new(ENV['API_KEY'])
-      results = if !(address=='')
-        @p=@client.spots_by_query(address) #Pizza near Miami Florida
+      return results = if !(address=='')
+        @client.spots_by_query(address) #Pizza near Miami Florida
       else
-        @p=@client.spots(params['latitude'], params['longitude'], :radius => params['radius']) #-33.8670522, 151.1957362 100
-                end
-      return results
+        @client.spots(params['latitude'], params['longitude'], :radius => params['radius']) #-33.8670522, 151.1957362 100
+                       end
        # self.body = results.inspect
     end
 
