@@ -1,0 +1,12 @@
+<h3>Fill location:</h3>
+<form method="post" action="<%= Web::Routes.path(:places) %>" enctype="multipart/form-data">
+  Latitude:<br>
+  <input type="text" name="latitude" placeholder="Enter Latitude"><br>
+  Longitude:<br>
+  <input type="text" name="longitude" placeholder="Enter Longitude"><br>
+  Radius:<br>
+  <input type="text" name="radius" placeholder="Enter Radius"><br>
+  Address:<br>
+  <input type="text" name="address" placeholder="Enter Address"><br>
+  <input type="submit" value="Send">
+</form>

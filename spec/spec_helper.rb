@@ -1,7 +1,9 @@
-# Require this file for unit tests
-ENV['LOTUS_ENV'] ||= 'test'
+require 'rubygems'
+require 'bundler/setup'
+require 'vcr_setup'
+require 'api_key'
+require File.dirname(__FILE__) + '/../lib/' + 'google_places'
 
-require_relative '../config/environment'
-require 'minitest/autorun'
-
-Lotus::Application.preload!
+def api_key
+  RSPEC_API_KEY
+end

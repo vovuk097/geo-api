@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'google_places'
+gem 'places'
+
+
+gem 'rabl'
+gem 'oj'
+
 gem 'bundler'
 gem 'rake'
 
@@ -15,6 +22,4 @@ end
 group :production do
   # gem 'puma'
 end
-
-gem 'google_places'
 

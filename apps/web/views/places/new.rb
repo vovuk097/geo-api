@@ -1,8 +1,8 @@
 require 'google_places'
 
-module Web::Views::Places
+module Web::Views::Home
 
-  class Index
+  class New
     include Web::View
 
   end

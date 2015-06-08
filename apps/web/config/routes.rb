@@ -1,3 +1,6 @@
+get 'home/index', to: 'home#index'
+resources :places, only: [:create, :new]
+
 # Configure your routes here
 # See: http://www.rubydoc.info/gems/lotus-router/#Usage
 #
