@@ -5,5 +5,5 @@ require_relative '../lib/geo-api'
 require_relative '../apps/web/application'
 
 Lotus::Container.configure do
-  mount Web::Application, at: '/'
+  mount Web::Application, at: '/api'
 end

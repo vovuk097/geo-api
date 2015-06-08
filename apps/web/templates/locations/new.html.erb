@@ -1,0 +1,16 @@
+<h3>Please enter your address:</h3>
+<form method="post" action="/api<%= Web::Routes.path(:locations) %>" enctype="multipart/form-data">
+  Latitude:<br>
+  <input type="text" name="latitude" placeholder="Enter latitude"><br>
+  Longitude:<br>
+  <input type="text" name="longitude" placeholder="Enter longitude"><br>
+  Radius:<br>
+  <input type="text" name="radius" placeholder="Enter radius"><br>
+  <br>
+  OR:<br>
+  <br>
+  Address:<br>
+  <input type="text" name="address" placeholder="Enter Address"><br>
+  <br>
+  <input type="submit" value="Send">
+</form>

@@ -17,4 +17,9 @@ group :production do
 end
 
 gem 'google_places'
-
+gem 'google-api-client'
+gem 'rspec-rails'
+gem 'rspec'
+group :development do
+  gem 'guard'
+end
