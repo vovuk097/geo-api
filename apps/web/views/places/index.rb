@@ -2,7 +2,7 @@ require 'google_places'
 
 module Web::Views::Places
 
-  class Create
+  class Index
     include Web::View
 
   end

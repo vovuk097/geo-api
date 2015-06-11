@@ -1,5 +1,6 @@
-get 'home/index', to: 'home#index'
-resources :places, only: [:create, :new]
+# get 'home/index', to: 'home#index'
+# get 'places/index', to: 'places#index', as: :index
+resources :places, only: [:index, :new]
 
 # Configure your routes here
 # See: http://www.rubydoc.info/gems/lotus-router/#Usage
